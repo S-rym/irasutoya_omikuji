@@ -1,0 +1,88 @@
+html {
+    background-color: red;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: "Yu Mincho" , "Hiragino Mincho ProN";
+    padding: 20px;
+    max-width: 480px;
+    height: 100vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.omikuji {
+    text-align: center;
+    padding: 10px;
+    border: double 20px red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.omikuji-headline {
+    margin: 0 0 80px;
+    font-size: 40px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    position: relative;
+
+    &::after {
+        content: "- Omikuji App -";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        color: red;
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg);}
+    5% { transform: rotate(10deg);}
+    10% { transform: rotate(-10deg);}
+    15% { transform: rotate(10deg);}
+    20% { transform: rotate(-10deg);}
+    25% { transform: rotate(0deg);}
+    100% { transform: rotate(0deg);}
+}
+
+.shake-animation {
+    animation: shake 1.5s  ease-in-out ;
+}
+
+.omikuji-result {
+    margin-bottom: 30px;
+    animation: shake-animation;
+
+    > img {
+        width: auto;
+        height: 300px;
+    }
+}
+
+.omikuji-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    background: red;
+    color: white;
+    border: double 10px white;
+    font-family: "Yu Mincho" , "Hiragino Mincho ProN";
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+}
+
+#js-detail {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
